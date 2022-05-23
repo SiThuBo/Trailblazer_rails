@@ -26,6 +26,13 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'trailblazer'
+gem 'trailblazer-rails'
+gem 'trailblazer-cells'
+gem 'cells-rails'
+gem 'cells-slim'
+gem 'slim'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
