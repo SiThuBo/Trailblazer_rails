@@ -22,22 +22,23 @@ docker-compose build
 # Create Database
 docker-compose run web bin/rails db:create
 
-# Temporarily start the web container and access it with bash
-docker-compose run --rm web bash
+# Start docker-compose services
+docker-compose up -d
+
+# Access the web container with bash
+docker-compose exec web bash
 
 # Node module installation
 bin/yarn install
 
 # Database migrate
-bin/db:migrate
+bin/rails db:migrate
 
 # Install simple_form
-rails generate simple_form:install
+bin/rails generate simple_form:install
 
 # End access to app container
 exit
 
-# Start docker-compose services
-docker-compose up -d
 ```
-All you have to do is access `http: // localhost: 3000`.
+All you have to do is access `http: // localhost: 3000/posts`.
