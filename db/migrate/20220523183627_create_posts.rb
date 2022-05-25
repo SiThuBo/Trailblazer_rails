@@ -1,6 +1,6 @@
-class CreateBlogPosts < ActiveRecord::Migration[6.0]
+class CreatePosts < ActiveRecord::Migration[6.0]
   def up
-    create_table :blog_posts do |t|
+    create_table :posts do |t|
       t.string :title
       t.string :body
       t.string :author
@@ -10,6 +10,6 @@ class CreateBlogPosts < ActiveRecord::Migration[6.0]
   end
 
   def down
-    drop_table :blog_posts
+    drop_table :posts
   end
 end

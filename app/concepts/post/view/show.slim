@@ -1,0 +1,14 @@
+.post-preview
+  h1
+    = title
+  p
+    = body
+  p.post-meta
+    = "Posted at #{time.strftime("%d %B %Y")}"
+.row
+  .col-sm-3.text-center
+    h4 = edit
+  .col-sm-6.text-center
+    h4 = delete
+  .col-sm-3.text-center
+    h4 = back
