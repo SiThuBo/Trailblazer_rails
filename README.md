@@ -19,14 +19,16 @@ git clone https://github.com/SiThuBo/Trailblazer_rails.git
 # Create Docker image from Dockerfile
 docker-compose build
 
+# Create Database
+docker-compose run web bin/rails db:create
+
 # Temporarily start the web container and access it with bash
 docker-compose run --rm web bash
 
 # Node module installation
 bin/yarn install
 
-# Database setup
-bin/db:create
+# Database migrate
 bin/db:migrate
 
 # Install simple_form
