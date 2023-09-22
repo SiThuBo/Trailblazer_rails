@@ -30,8 +30,8 @@ RUN bundle install --jobs 4 --retry 3
 COPY . $APP_ROOT
 
 # script to be executed every time the container starts
-COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
+COPY entrypoint.sh /usr/bin/entrypoint.sh
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
